@@ -1,0 +1,40 @@
+body {
+	background-color: hsl(219 27% 41%);
+	font-family: Arial, sans-serif;
+}
+main, head, footer{
+	background-color: hsl(168 50% 85%);
+	border: 4px solid hsl(169 82% 42%);
+	margin: 0 auto;
+	width: 80vw;
+
+	padding: 1.5rem;
+}
+hr {
+	border: 2px solid hsl(169 82% 42%);
+}
+h1 { 
+    color:red;
+    border-bottom: 1px solid hsl(169 82% 42%);
+    }
+h2 {
+	color: hsl(169 82% 42%);
+}
+h1, h2 {
+	font-family: "Press Start 2P";
+}
+blockquote { 
+    background-color: lightgray;
+    padding: 1rem;
+    }
+a, a:link, a:visited, a:focus, a:hover, a:active{
+	color: hsl(219 27% 41%)
+}
+img.side {
+	float:right;
+	margin: 0 12px;
+}
+footer {
+	margin-top: 2rem;
+	background-color: hsl(168 65% 50%);
+}
