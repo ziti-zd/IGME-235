@@ -5,15 +5,16 @@ h2, h3{
 }
 footer{
     clear: both;
-    position: fixed;
+    position: static;
     top: 0%;
     right: 0%;
-    z-index: -5;
+    z-index: 0;
 }
 figure{
-    float: right;
     width: 40%;
-    margin: 0 1rem;
+    max-width: 650px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 figure img{
     width: 100%;
@@ -21,8 +22,33 @@ figure img{
 div.tet{
     float: left;
     width: 25%;
-    border: 1px solid red;
+    flex: 0 0 100px;
+    border: 1px solid black;
+    text-align: center;
 }
+
 div.tet img{
-    width: 100%;
+    width: 60%;
+}
+
+div.aliases{
+    text-align: left;
+    margin: 1em;
+}
+
+header, main, footer {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#tetlist{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+span.name{
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
