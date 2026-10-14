@@ -1,0 +1,47 @@
+/* Appearance */
+body {
+    background-color: hsl(50, 100%, 83%);
+    font-family: serif;
+    margin: 0;
+}
+
+div.column{
+    padding: 1ex 0;
+}
+
+figure.half-page-figure {
+    background-color: hsl(0, 21%, 81%);
+}
+
+figure.half-page-figure img {
+    border: white 1rem solid;
+}
+
+/* Layout */
+main {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 4fr 2fr 4fr 10fr;
+    grid-template-areas: "text-column-1 thin-figure text-column-2 half-page-figure";
+    justify-content: space-between;
+}
+
+main * {
+    border: 1px red solid;
+}
+
+#text-column-1 {
+    grid-area: text-column-1;
+}
+
+#text-column-2 {
+    grid-area: text-column-2;
+}
+
+#fig1 {
+    grid-area: thin-figure;
+}
+
+#fig2 {
+    grid-area: half-page-figure;
+}
