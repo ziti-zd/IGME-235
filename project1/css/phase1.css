@@ -1,33 +1,39 @@
-/* Appearance */
 body {
     background-color: hsl(50, 100%, 83%);
     font-family: serif;
     margin: 0;
 }
 
-div.column{
-    padding: 1ex 0;
-}
-
-figure.half-page-figure {
-    background-color: hsl(0, 21%, 81%);
-}
-
-figure.half-page-figure img {
-    border: white 1rem solid;
-}
-
-/* Layout */
-main {
+main * {
     margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.6ch;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1.calligraphy {
+    font-family: "Pinyon Script", cursive;
+    letter-spacing: normal;
+    font-stretch: normal;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+h1.calligraphy, h2 {
+    border-bottom: 0.3rem double;
+}
+
+main {
+    margin: 1rem;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 4fr 2fr 4fr 10fr;
     grid-template-areas: "text-column-1 thin-figure text-column-2 half-page-figure";
-    justify-content: space-between;
-}
-
-main * {
-    border: 1px red solid;
 }
 
 #text-column-1 {
@@ -44,4 +50,75 @@ main * {
 
 #fig2 {
     grid-area: half-page-figure;
+}
+
+div.column{
+    border-left: 0.4ch red solid;
+    border-right: 0.4ch red solid;
+    padding: 0 0.8ch;
+
+    margin: 0 1ch;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+h2 {
+    margin: 0.5rem 0;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+p {
+    text-indent: 2ch;
+}
+
+p.initial {
+    text-indent: 0;
+}
+
+figure.thin-figure {
+    background-color: white;
+    padding: 1ch;
+}
+
+img {
+    display: block;
+    background-color: white;
+    max-width: 100%;
+}
+
+figcaption {
+    margin: 1ch 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+div.backdrop {
+    box-sizing: border-box;
+    background-color: hsl(0, 21%, 81%);
+    height: 100%;
+    width: auto;
+    margin: 0 1ch;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+figure.half-page-figure {
+    border-left: 0.4ch red solid;
+    border-right: 0.4ch red solid;
+}
+
+figure.half-page-figure figcaption {
+    max-width: 50%;
+}
+
+figure.half-page-figure img {
+    border: white 1rem solid;
+    max-width: 75%;
 }

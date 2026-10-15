@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="css/doc.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="spec.html">Phase 1</a>
+                </li>
+                <li>
+                    <a href="index.html">Phase 2</a>
+                </li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+        <h1>Design Reference</h1>
+        <div class="img-container">
+            <img src="media/phase1-reference-1.png" alt="A text layout from my reference.">
+            <img src="media/phase1-reference-2.png" alt="An image layout from my reference.">
+        </div>
+        <h1>Production Sketches</h1>
+        <div class="img-container">
+            <div class="img-heading-pair">
+                <h2>Computer Layout</h2>
+                <img src="media/phase1-pc-layout-sketch.png" alt="A sketch of my Phase 1 page's layout for wide screens.">
+            </div>
+            <div class="img-heading-pair">
+                <h2>Mobile Layout</h2>
+                <img src="media/phase1-mobile-layout-sketch.png" alt="A sketch of my Phase 1 page's layout for narrow screens.">
+            </div>
+        </div>
+        <h1>Challenges</h1>
+        <p>My reference has many subtle uses of white space. Replicating them all required lots of attention to detail, and some creativity. The righthand figure was the most challenging element to replicate. I had to create a separate <code>&lt;div&gt;</code> element with its own margins in order to create a gap between the background color and the red borders. I chose to make it a Flexbox container in order to center its contents vertically and horizontally. Adding the white border around the image therein wasn't difficult, but it was unconventional.</p>
+        <p>The typography also posed some challenges, thoroughly testing my knowledge of CSS properties and techniques. Here's a list of everything I used:</p>
+        <ul>
+            <li><code>letter-spacing</code> for the chapter number <code>&lt;h1&gt;</code> element</li>
+            <li><code>font-family</code> for the chapter name <code>&lt;h1&gt;</code> element</li>
+            <li><code>font-variant</code> for the small caps paragraph heading <code>&lt;h2&gt;</code> elements</li>
+            <li>A unique <code>class</code> value for the first <code>&lt;p&gt;</code> element after an <code>&lt;h2&gt;</code> to distinguish it from the <code>&lt;p&gt;</code> elements that needed to be indented</li>
+        </ul>
+        <p>The double underlines found underneath the chapter name and paragraph headings were particularly challenging. In the reference, the underlines avoid intersecting with the parts of letters that extend beneath the baseline, which is a behavior that is only possible with the <code>underline</code> value of the <code>text-decoration</code> property. However, the underlines are doubled and have widths that do not match the width of their text, which is not possible using the <code>text-decoration</code> property. This was an instance where the capabilities of CSS did not match those of print typography, and I had to compromise. I considered the widths of the underlines their most important aesthetic feature, so I chose to apply a <code>border-bottom</code> property with a style of <code>double</code>.</p>
+        <h1>Sources</h1>
+        <h2>Original Layout and Design</h2>
+        <p>I based my project on the design of pages 32-33 of <span class="book-title">An Introduction to Heraldry</span> by Stefan Oliver, seen above.</p>
+        <h2>Image Credits</h2>
+        <p>From my Phase 1 mockup:</p>
+        <ul>
+            <li>Ermine-patterned shield courtesty of Wikipedia</li>
+            <li>Heraldic family tree courtesy of <a href="https://griffinrampant.wordpress.com">griffinrampant.wordpress.com</a></li>
+        </ul>
+        <p>I also frequently consulted our class textbook, <span class="book-title">Learning Web Design, 5th Edition</span> by Jennifer Robins, and <a href="https://w3schools.com">W3 Schools</a> for help.</p>
+    </main>
+</body>
+</html>

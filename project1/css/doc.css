@@ -1,0 +1,62 @@
+body {
+    background-color: hsl(50, 100%, 83%);
+    font-family: serif;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    background-color: red;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 2ch;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: red;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited, nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
+    color: white;
+}
+
+h1, h2 {
+    font-variant: small-caps;
+}
+
+div.img-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+div.img-container > img {
+    max-width: 50%;
+}
+
+div.img-heading-pair {
+    max-width: 50%;
+}
+
+div.img-heading-pair img {
+    max-width: 100%;
+}
+
+p, li {
+    max-width: 50vw;
+}
+
+code {
+    background-color: hsl(0, 21%, 81%);
+    padding: 0 0.5ch;
+}
+
+span.book-title {
+    font-style: italic;
+}
