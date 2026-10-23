@@ -73,7 +73,7 @@ p {
     text-indent: 2ch;
 }
 
-p.initial {
+div.heading-chunk p:nth-of-type(1) {
     text-indent: 0;
 }
 

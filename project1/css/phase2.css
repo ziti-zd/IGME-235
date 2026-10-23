@@ -1,0 +1,275 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: hsl(50, 100%, 89%); */
+    background-color: white;
+    font-family: "Asap Sharp", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    background-color: rgb(23 23 150);
+    border-bottom: 0.25rem rgb(247 219 23) solid;
+    height: fit-content;
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 1.5rem;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 2rem;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: rgb(255, 205, 0);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+a:focus, a:hover, a:active {
+    text-decoration: underline;
+}
+
+h1#title {
+    font-size: 5em;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+h1.calligraphy {
+    font-family: "EDU NSW ACT Cursive", cursive;
+    letter-spacing: normal;
+    font-stretch: normal;
+    font-size: 3rem;
+    font-style: italic;
+    padding-top: 0.3ch;
+    padding-bottom: 1ch;
+    font-weight: 500;
+}
+
+div#introduction {
+    max-width: 75ch;
+    margin: 1rem auto;
+    padding: 2ch;
+}
+
+h2 {
+    border-bottom: 0.3em black double;
+}
+
+div.chapter {
+    padding: 1rem 0;
+}
+
+:nth-child(2n + 1 of div.chapter) {
+    background-color: red;
+    color: white;
+}
+
+:nth-child(2n of div.chapter) {
+    background-color: white;
+}
+
+div.chapter-content {
+    border: 0.5rem rgb(23 23 150) solid;
+    background-color: white;
+    color: black;
+    margin: 0 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-areas: "column-1         thin-figure      column-2"
+                         "half-page-figure half-page-figure half-page-figure";
+    height: fit-content;
+}
+
+div.chapter-content div.column:nth-of-type(1) {
+    grid-area: column-1;
+}
+
+div.chapter-content div.column:nth-of-type(2) {
+    grid-area: column-2;
+}
+
+#fig1 {
+    grid-area: thin-figure;
+}
+
+#fig2 {
+    grid-area: half-page-figure;
+}
+
+div.column{
+    padding: 0 0.8ch;
+
+    margin: 0 1ch;
+    display: flex;
+    flex-flow: column;
+    justify-content: top;
+}
+
+h2 {
+    margin: 0.5rem 0;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+p {
+    font-size: 1rem;
+    text-indent: 2ch;
+}
+
+div.heading-chunk p:nth-of-type(1) {
+    text-indent: 0;
+}
+
+figure.thin-figure {
+    background-color: rgb(23 23 150);
+    margin: 1rem 0;
+    padding: 1ch;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+img {
+    display: block;
+    background-color: white;
+    max-width: 100%;
+}
+
+figcaption {
+    margin: 1ch 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+figure.thin-figure figcaption {
+    color: white;
+}
+
+div.backdrop {
+    box-sizing: border-box;
+    border-top: 0.5rem rgb(23 23 150) solid;
+    background-color: hsl(0, 21%, 81%);
+    height: 100%;
+    margin: 0;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+figure.half-page-figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+figure.half-page-figure figcaption {
+    max-width: 35%;
+}
+
+figure.half-page-figure img {
+    border: white 1rem solid;
+    max-width: 50%;
+}
+
+hr {
+    border: none;
+}
+
+div#back-to-top {
+    position: fixed;
+    bottom: 1ch;
+    right: 1ch;
+
+    width: 10vw;
+    padding: 1ch;
+    text-align: center;
+
+    background-color: rgb(23 23 150);
+    border: 0.25rem rgb(255, 205, 0) solid;
+    border-radius: 0.5ch;
+}
+
+/* On larger displays, the Back To Top button will hide in the bottom of the screen until
+   users hover their cursor over it. This behavior goes away for smaller displays because
+   mobile users cannot hover their fingers over elements like mouse cursors can. */
+
+@media screen and (min-width: 850px) {
+    div#back-to-top{
+        right: -10vw;
+        transition-property: right; 
+        transition-duration: 0.2s;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    div#back-to-top:hover {
+    right: 0vw;
+    }
+}
+
+footer {
+    background-color: rgb(23 23 150);
+    color: rgb(255, 205, 0);
+    margin: 0;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    line-height: 6ch;
+    text-indent: 1rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a:link, footer a:visited, footer a:focus, footer a:hover, footer a:active {
+    color: white;
+}
+
+@media screen and (max-width: 850px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    div.chapter-content{
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+        max-width: 75ch;
+    }
+    figure.thin-figure {
+        margin: 0;
+    }
+}
